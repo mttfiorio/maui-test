@@ -26,6 +26,8 @@ namespace MauiApp1
             builder.Services.AddTransient<DetailsPage>();
             builder.Services.AddTransient<DetailsViewModel>();
 
+            builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+
             return builder.Build();
         }
     }
